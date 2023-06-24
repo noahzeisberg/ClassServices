@@ -6,21 +6,21 @@
       <a @click="toggleModal" href="#">Absenz</a>
     </div>
   </nav>
-  <GitStatistics/>
   <Overview/>
 
-  <Modal v-if="showModal" @close="toggleModal"/>
+  <Modal v-if="showModal" @close="toggleModal">
+      <h1>Test modal</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit consectetur odit temporibus id exercitationem debitis, quisquam ad dolores nesciunt maiores velit qui ex perspiciatis veniam dolore necessitatibus fugiat, dicta blanditiis!</p>
+  </Modal>
 </template>
 
 <script>
-import GitStatistics from './components/GitStatistics.vue'
 import Modal from './components/Modal.vue'
 import Overview from './components/Overview.vue'
 
 export default {
   name: 'App',
   components: {
-    GitStatistics,
     Overview,
     Modal
   },
